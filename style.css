@@ -1,0 +1,172 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #e0eafc;
+  color: #34495e;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Styling untuk (dark mode) */
+body.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+body.dark-mode .container {
+  background: #34495e;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.session-selectors {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.session-btn {
+  background-color: #f0f4f8;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.session-btn.active {
+  background-color: #5d9cec;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(93, 156, 236, 0.4);
+}
+
+.session-btn:hover:not(.active) {
+  background-color: #d1d9e6;
+}
+
+body.dark-mode .session-btn {
+  background-color: #44586d;
+  color: #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .session-btn.active {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+}
+
+.timer-display {
+  font-size: 6em;
+  font-weight: 600;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  margin-top: 25px;
+}
+
+.control-btn,
+#theme-toggle {
+  background: #5d9cec;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .control-btn,
+body.dark-mode #theme-toggle {
+  background: #4caf50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn svg,
+#theme-toggle svg {
+  fill: #fff;
+  transition: fill 0.3s;
+}
+
+.control-btn:hover,
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn:active,
+#theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.settings {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.settings div {
+  display: flex;
+  align-items: center;
+}
+
+.settings label {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.settings input {
+  width: 50px;
+  padding: 8px;
+  margin-left: 10px;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .settings input {
+  background-color: #44586d;
+  border-color: #667e94;
+  color: #ecf0f1;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
